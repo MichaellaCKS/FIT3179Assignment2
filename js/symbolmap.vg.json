@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": { "view": { "stroke": "" } },
+    "width": 1800,
+    "height": 200,
+    "data": {
+        "url": "top5.csv"
+    },
+    "transform": [{
+            "calculate": "{'M': '🐄', 'F': '🐖'}[datum.gender]",
+            "as": "emoji"
+        },
+        { "window": [{ "op": "rank", "as": "number" }], "groupby": ["country", "gender"] }
+    ],
+    "mark": { "type": "text", "baseline": "middle" },
+    "encoding": {
+        "x": { "field": "number", "type": "ordinal", "axis": null, "scale": { "type": "band", "bandPadding": 0.2 } },
+        "y": { "field": "gender", "type": "nominal", "axis": null, "sort": null },
+        "row": { "field": "country", "header": { "title": "" } },
+        "text": { "field": "emoji", "type": "nominal" },
+        "size": { "value": 30 }
+    }
+}

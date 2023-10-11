@@ -17,6 +17,11 @@
             "field": "finalWorth",
             "type": "quantitative",
             "title": "Worth in billions (USD)"
+        },
+        "color": {
+            "field": "gender",
+            "type": "nominal",
+            "title": "Worth in billions (USD)"
         }
     }
 }
