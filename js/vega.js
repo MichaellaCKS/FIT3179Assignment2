@@ -1,5 +1,5 @@
-var specVis1 = "cloropeth.vg.json";
-var specVis2 = "line.vg.json";
+var specVis1 = "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/cloropeth.vg.json";
+var specVis2 = "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/line.vg.json";
 
 vegaEmbed('#choropeth', specVis1, {
     "actions": false

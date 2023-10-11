@@ -4,7 +4,7 @@
     "height": 400,
     "title": "Age vs final worth",
     "data": {
-        "url": "billionaires.csv"
+        "url": "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/billionaires.csv"
     },
     "mark": "line",
     "encoding": {
