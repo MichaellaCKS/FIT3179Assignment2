@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
-    "height": 400,
+    "height": 200,
     "title": "Age vs final worth",
     "data": {
         "url": "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/billionaires.csv"
