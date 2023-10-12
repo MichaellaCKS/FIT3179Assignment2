@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": { "view": { "stroke": "" } },
-    "width": 1800,
+    "width": 2000,
     "height": 200,
     "data": {
         "url": "top5.csv"
@@ -11,6 +11,7 @@
             "as": "emoji"
         },
         { "window": [{ "op": "rank", "as": "number" }], "groupby": ["country", "gender"] }
+
     ],
     "mark": { "type": "text", "baseline": "middle" },
     "encoding": {
