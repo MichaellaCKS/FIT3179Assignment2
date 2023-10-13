@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "width": 800,
-    "height": 500,
-    "padding": { "left": 5, "right": 5, "top": 20, "bottom": 0 },
+    "width": 1000,
+    "height": 800,
+    "padding": { "left": 5, "right": 5, "top": 20, "bottom": 20 },
     "autosize": "none",
     "signals": [
         { "name": "cx", "update": "width / 2" },
@@ -20,18 +20,37 @@
     ],
     "data": [{
         "name": "table",
-        "url": "bubble.csv"
+        "values": [
+            { "category": "Fashion & Retail", "amount": 1698800 },
+            { "category": "Automotive", "amount": 525300 },
+            { "category": "Technology", "amount": 1877900 },
+            { "category": "Finance & Investments", "amount": 1605100 },
+            { "category": "Media & Entertainment", "amount": 427500 },
+            { "category": "Telecom", "amount": 203500 },
+            { "category": "Diversified", "amount": 905200 },
+            { "category": "Food & Beverage", "amount": 957200 },
+            { "category": "Logistics", "amount": 239500 },
+            { "category": "Gambling & Casinos", "amount": 120500 },
+            { "category": "Manufacturing", "amount": 1019000 },
+            { "category": "Real Estate", "amount": 657400 },
+            { "category": "Metals & Mining", "amount": 446800 },
+            { "category": "Energy", "amount": 453500 },
+            { "category": "Healthcare", "amount": 643200 },
+            { "category": "Service", "amount": 173400 },
+            { "category": "Construction & Engineering", "amount": 118500 },
+            { "category": "Sports", "amount": 134500 }
+        ]
     }],
     "scales": [{
             "name": "size",
-            "domain": { "data": "table", "field": "worth" },
-            "range": [100, 3000]
+            "domain": { "data": "table", "field": "amount" },
+            "range": [0.01, 0.02]
         },
         {
             "name": "color",
             "type": "ordinal",
             "domain": { "data": "table", "field": "category" },
-            "range": "ramp"
+            "range": { "scheme": "oranges" }
         }
     ],
     "marks": [{
@@ -45,21 +64,18 @@
                     "yfocus": { "signal": "cy" }
                 },
                 "update": {
-                    "size": { "signal": "pow(2 * datum.worth, 2)", "scale": "size" },
+                    "size": { "signal": "pow(2 * datum.amount, 2)", "scale": "size" },
                     "stroke": { "value": "white" },
                     "strokeWidth": { "value": 1 },
-                    "tooltip": { "signal": "datum" }
+                    "tooltip": { "signal": "datum.category + ' : $' + format(datum.amount, ',') + ' bn'" }
                 }
             },
             "transform": [{
                 "type": "force",
                 "iterations": 100,
                 "static": false,
-                "forces": [{
-                        "force": "collide",
-                        "iterations": 2,
-                        "radius": { "expr": "sqrt(datum.size) / 2" }
-                    },
+                "forces": [
+                    { "force": "collide", "iterations": 2, "radius": { "expr": "sqrt(datum.size) / 2" } },
                     { "force": "center", "x": { "signal": "cx" }, "y": { "signal": "cy" } },
                     { "force": "x", "x": "xfocus", "strength": { "signal": "gravityX" } },
                     { "force": "y", "y": "yfocus", "strength": { "signal": "gravityY" } }
@@ -75,10 +91,13 @@
                     "baseline": { "value": "middle" },
                     "fontSize": { "value": 15 },
                     "fontWeight": { "value": "bold" },
-                    "fill": { "value": "white" },
+                    "fill": { "value": "black" },
                     "text": { "field": "datum.category" }
                 },
-                "update": { "x": { "field": "x" }, "y": { "field": "y" } }
+                "update": {
+                    "x": { "field": "x" },
+                    "y": { "field": "y" }
+                }
             }
         }
     ]
