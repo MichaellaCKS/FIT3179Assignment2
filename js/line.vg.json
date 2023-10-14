@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
+    "width": 450,
     "height": 200,
     "title": "Age vs final worth",
     "data": {
@@ -11,7 +11,8 @@
         "x": {
             "field": "age",
             "type": "quantitative",
-            "title": "Age"
+            "title": "Age",
+            "scale": { "domain": [20, 100] }
         },
         "y": {
             "field": "finalWorth",
@@ -21,7 +22,13 @@
         "color": {
             "field": "gender",
             "type": "nominal",
-            "title": "Worth in billions (USD)"
+            "scale": {
+                "domain": ["M", "F"],
+                "range": ["#00a6ed", "#fc6e32"]
+            },
+            "title": "Worth in billions (USD)",
+            "legend": { "orient": "top" }
         }
+
     }
 }

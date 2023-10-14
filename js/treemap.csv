@@ -1,0 +1,252 @@
+name,parent,value
+root,,
+Fashion & Retail,root,
+Automotive,root,
+Technology,root,
+Finance & Investments,root,
+Media & Entertainment,root,
+Telecom,root,
+Diversified,root,
+Food & Beverage,root,
+Logistics,root,
+Gambling & Casinos,root,
+Manufacturing,root,
+Real Estate,root,
+Metals & Mining,root,
+Energy,root,
+Healthcare,root,
+Service,root,
+Construction & Engineering,root,
+Sports,root,
+LVMH,Fashion & Retail,211000
+Tesla,Automotive,180000
+Amazon,Technology,138400
+Oracle,Technology,107000
+Berkshire Hathaway,Finance & Investments,106000
+Microsoft,Technology,196400
+Bloomberg LP,Media & Entertainment,94500
+L'Oréal,Fashion & Retail,80500
+Google,Technology,189000
+Zara,Fashion & Retail,84200
+Beverages,Food & Beverage,68000
+Facebook,Technology,83400
+Koch Industries,Diversified,118000
+Walmart,Fashion & Retail,220900
+Media,Media & Entertainment,71900
+Dell Technologies,Technology,50100
+Infrastructure,Diversified,57000
+Nike,Fashion & Retail,45100
+TikTok,Technology,45000
+Retail,Fashion & Retail,74300
+Luxury goods,Fashion & Retail,73100
+Shipping,Logistics,169900
+Nutella,Food & Beverage,38900
+Candy,Food & Beverage,115000
+Internet media,Technology,46300
+Casinos,Gambling & Casinos,35000
+Hedge funds,Finance & Investments,212300
+Red Bull,Food & Beverage,34700
+Batteries,Automotive,64100
+Fashion retail,Fashion & Retail,39900
+Music,Diversified,32100
+Chanel,Fashion & Retail,63200
+E-commerce,Technology,80600
+Fasteners,Manufacturing,29700
+Real estate,Real Estate,255500
+Trading,Finance & Investments,35700
+Investments,Finance & Investments,185700
+BMW,Automotive,27400
+Mining,Metals & Mining,105300
+Online games,Technology,45800
+software services,Technology,25600
+Coal,Energy,37700
+Discount brokerage,Finance & Investments,34500
+Fertilizers,Metals & Mining,25200
+BMW,Automotive,24600
+Banking,Finance & Investments,57400
+Metals,Metals & Mining,23700
+Home appliances,Manufacturing,23400
+Chemicals,Manufacturing,75200
+Vaccines,Healthcare,34800
+Internet,Telecom,29100
+Steel,Metals & Mining,78300
+Cheese,Food & Beverage,37400
+Fidelity,Finance & Investments,33700Gas,Energy,21600
+Package delivery,Service,26800
+Semiconductors,Technology,35400
+Estee Lauder,Fashion & Retail,21000
+Sensors,Manufacturing,21000
+Oil,Energy,63200
+Hospitals,Healthcare,34100
+Automobiles,Automotive,39000
+Mining,Metals & Mining,26300
+Real estate,Diversified,57400
+Pig breeding,Food & Beverage,18900
+Batteries,Automotive,18700
+Oil & gas,Energy,18500
+Oil,Energy,51300
+Quicken Loans,Finance & Investments,18000
+Steel,Metals & Mining,50500
+Home improvement stores,Fashion & Retail,17400
+Newspapers,Media & Entertainment,17100
+Banking,Finance & Investments,43100
+Aldi,Fashion & Retail,16500
+Finance,Finance & Investments,21800
+medical devices,Healthcare,16300
+H&M,Fashion & Retail,16200
+Soy sauce,Food & Beverage,21100
+Supermarkets,Fashion & Retail,39100
+Beer,Food & Beverage,35000
+Pharmaceuticals,Healthcare,98400
+Wireless networking,Technology,15500
+Retail,Fashion & Retail,47400
+Alcohol,Food & Beverage,14800
+Heineken,Food & Beverage,14700
+Medical devices,Healthcare,43400
+Paints,Manufacturing,26700
+Commodities,Diversified,14200
+Cement,Manufacturing,22400
+Casinos/hotels,Gambling & Casinos,13900
+Building supplies,Construction & Engineering,13700
+WhatsApp,Technology,13700
+Dallas Cowboys,Sports,13300
+Oil & gas,Energy,13300
+Automobiles,Automotive,13200
+Sports,Sports,12900
+Auto parts,Automotive,27900
+Apple,Technology,12000
+Palm oil,Diversified,11800
+Messaging app,Technology,11500
+Agribusiness,Food & Beverage,19100
+Online retail,Fashion & Retail,11400
+Fertilizer,Manufacturing,11300
+Video surveillance,Finance & Investments,11000Energy,Finance & Investments,20100
+Gas stations,Fashion & Retail,10900
+Manufacturing,Sports,23500
+Gold,Finance & Investments,10500
+Cryptocurrency exchange,Finance & Investments,10500
+Banks,Finance & Investments,10300
+Software,Technology,46900
+Business software,Technology,17200
+Hermes,Fashion & Retail,9800
+Fertilizers,Manufacturing,9700
+Private equity,Finance & Investments,92700
+Smartphones,Technology,9700
+Warehouse automation,Technology,9600
+Solar panels,Energy,9600
+Biotech,Healthcare,9400
+Food delivery,Technology,9400
+Airbnb,Technology,24900
+Vacuums,Manufacturing,9300
+Cable television,Media & Entertainment,9200
+Software services,Technology,9200
+Hardware stores,Fashion & Retail,9200
+Alcoholic beverages,Food & Beverage,9000
+Hydraulic machinery,Manufacturing,9000
+Packaging,Food & Beverage,26700
+Ecommerce,Fashion & Retail,8800
+Venture capital,Technology,14100
+EBay,Technology,8800
+Soft drinks,Food & Beverage,8600
+Solar wafers and modules,Manufacturing,8500
+Media,Media & Entertainment,33300
+Diamonds,Metals & Mining,8400
+Aluminum products,Metals & Mining,8400
+Sporting goods retail,Fashion & Retail,8300
+Drugstores,Fashion & Retail,8300
+Houston Rockets,Food & Beverage,8100
+Oil and gas,Gambling & Casinos,8100
+Home Depot,Fashion & Retail,15500
+Insurance,Finance & Investments,8000
+Coal mines,Metals & Mining,8000
+Sports apparel,Fashion & Retail,15400
+Samsung,Technology,7900
+Metals and mining,Metals & Mining,7900
+Petrochemicals,Manufacturing,28300
+Financial information,Technology,7800
+Furniture,Manufacturing,13100
+Shoes,Fashion & Retail,7800
+Movies,Media & Entertainment,7700
+Internet search,Technology,7700
+Photovoltaic equipment,Energy,7600
+Restaurants,Food & Beverage,7500
+Textiles,Fashion & Retail,12800
+Construction,Construction & Engineering,13800
+Agriculture,Food & Beverage,18000
+Cement,Manufacturing,13000
+Ports,Logistics,7300
+Electronics components,Technology,14100
+Electronics,Technology,25000
+Auto loans,Finance & Investments,7200
+Pipelines,Energy,34400
+Fintech,Finance & Investments,7200
+Personal care goods,Fashion & Retail,7200
+Beverages,Food & Beverage,20400
+Healthcare software,Technology,7100
+Gambling,Gambling & Casinos,7100
+Self storage,Service,7100
+Construction equipment,Manufacturing,13400
+Health care,Healthcare,7100
+Mapping software,Technology,7000
+Apparel,Fashion & Retail,12200
+Food distribution,Food & Beverage,14000
+Homebuilding,Diversified,6900
+Cargill,Food & Beverage,6900
+Hedge fund,Finance & Investments,6900
+Lithium batteries,Technology,6900
+Medical equipment,Healthcare,12600
+Online gambling,Gambling & Casinos,12000
+Tech investments,Finance & Investments,6800
+Intel,Technology,6800
+Metals,Diversified,6800
+Money management,Finance & Investments,6700
+Lego,Manufacturing,26800
+Solar panel components,Manufacturing,6700
+Natural gas,Energy,6700
+Computer hardware,Technology,13400
+Snacks,Food & Beverage,6700
+Chick-fil-A,Food & Beverage,19800
+Investments,Real Estate,6500
+Staffing,Sports,6400
+Biomedical products,Healthcare,6400
+Fertilizer,Manufacturing,6400
+Solar equipment,Energy,6300
+Natural gas distribution,Energy,6300
+Metalworking tools,Manufacturing,6300
+Beer,Food & Beverage,6200
+Temp agency,Service,6200
+Power strips,Manufacturing,6200
+Power strip,Manufacturing,6200
+Telecom,Diversified,6100
+Coffee,Fashion & Retail,12200
+Hotels,Energy,22600
+Smartphone screens,Technology,6100
+Convinience stores,Fashion & Retail,6000
+Security software,Technology,6000
+IT provider,Technology,11400
+Finance,Finance & Investments,16700
+Food,Food & Beverage,5900
+Record label,Media & Entertainment,5700
+Motorcycles,Automotive,5600
+Pharmaceutical ingredients,Healthcare,5600
+Gambling software,Gambling & Casinos,5600
+Biotech,Healthcare,11100
+Carnival Cruises,Service,5500
+Payments software,Technology,5500
+Payment software,Technology,5500
+Timberland,Manufacturing,5500
+Toyota dealerships,Automotive,5500
+Medical packaging,Healthcare,5500
+Mortgage lender,Finance & Investments,5400
+Kitchen appliances,Manufacturing,5400
+Consumer goods,Fashion & Retail,21600
+Carpet,Manufacturing,5300
+Pest control,Service,5300
+Poultry genetics,Food & Beverage,5300
+Real estate management,Real Estate,5200
+Telecoms,Telecom,5200
+Frozen foods,Food & Beverage,5200
+Plush toys,Real Estate,5200
+Franklin Templeton,Finance & Investments,5100
+Shipping,Logistics,5100
+San Francisco 49ers,Sports,5100

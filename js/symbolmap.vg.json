@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "config": { "view": { "stroke": "" } },
-    "width": 1000,
-    "height": 100,
+    "width": 800,
+    "height": 80,
     "data": {
-        "url": "top5.csv"
+        "url": "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/top5.csv"
     },
     "transform": [{
             "calculate": "{'M': ' 🟦 ', 'F': '  🟧  '}[datum.gender]",
