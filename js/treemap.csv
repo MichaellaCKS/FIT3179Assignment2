@@ -71,7 +71,8 @@ Vaccines,Healthcare,34800
 Internet,Telecom,29100
 Steel,Metals & Mining,78300
 Cheese,Food & Beverage,37400
-Fidelity,Finance & Investments,33700Gas,Energy,21600
+Fidelity,Finance & Investments,33700
+Gas,Energy,21600
 Package delivery,Service,26800
 Semiconductors,Technology,35400
 Estee Lauder,Fashion & Retail,21000
@@ -120,7 +121,8 @@ Messaging app,Technology,11500
 Agribusiness,Food & Beverage,19100
 Online retail,Fashion & Retail,11400
 Fertilizer,Manufacturing,11300
-Video surveillance,Finance & Investments,11000Energy,Finance & Investments,20100
+Video surveillance,Finance & Investments,11000
+Energy,Finance & Investments,20100
 Gas stations,Fashion & Retail,10900
 Manufacturing,Sports,23500
 Gold,Finance & Investments,10500
