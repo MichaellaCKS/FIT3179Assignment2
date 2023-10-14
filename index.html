@@ -11,6 +11,12 @@
 <!-- CSS file -->
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest&family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+
 </head>
 
 
@@ -19,33 +25,33 @@
     <div class="page">
 
         <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h1>Multiple Visualisations</h1>
-                <p>This page demonstrates how you can use pure.css grid for your layout.</p>
-            </div>
+        <div class="header">
+            <h1>Visualising the world's billionaires</h1>
+            <p style="color: white;">This visualisation delves into the break-down of the world's top 1%.</p>
         </div>
         <!-- end pure grid group -->
-        <div>
+        <div class="container-normal">
             <div class="description description-right">
-                <h2>First and Second Columns Combined</h2>
-                <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
-                    accumsan in nisl.</p>
+                <h2>Wealth distribution</h2>
+                <p>This map presents a vivid visual representation of the distribution of billionaires across the globe. By shading each country proportionally to its number of billionaires, patterns of wealth concentration become evident. Notably, there
+                    are striking disparities in the distribution. The <span class="countries">USA </span> and <span class="countries">China</span>, account for more than half of the billionaires. Much of the rest of the world remains lightly <span class="shaded">shaded</span>,
+                    revealing a far lower density of such extreme wealth.</p>
             </div>
             <div id=choropeth></div>
 
         </div>
 
         <!-- pure grid group -->
-        <div class="pure-g">
+        <div class="container">
             <div class="pure-u-2-3">
                 <div id="line" class="vis-container"></div>
             </div>
             <div class="pure-u-1-3">
                 <div class="description description-right">
-                    <h2>First and Second Columns Combined</h2>
-                    <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus
-                        viverra accumsan in nisl.</p>
+                    <h2>Gender Gap</h2>
+                    <p>It is evident that <span class="men"> men </span>constitute a much larger portion of global billionaires than <span class="women"> women</span>. It is also important to note that most people amass their wealth much later in life.
+                        <br><br> Zoom in and drag to explore the graph more closely.
+                    </p>
                 </div>
             </div>
         </div>
@@ -53,49 +59,46 @@
 
         <!-- end pure grid group -->
 
-        <div>
+        <div class=container-normal>
             <div class="description description-right">
-                <h2>First and Second Columns Combined</h2>
-                <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
-                    accumsan in nisl.</p>
+                <h2>Gender distribution in the top 5 countries</h2>
+                <p>This graph explores in more detail the differences between countries and genders. As seen before, <span class="countries">USA </span> and <span class="countries"> China</span> are well in front of the other countries.
+                </p>
+                <p>Each 🟦 or 🟧 represents 10 billionaires.</p>
             </div>
             <div id=symbol></div>
 
         </div>
-        <div>
+        <div class=" container-normal">
             <div class="description description-right">
-                <h2>First and Second Columns Combined</h2>
-                <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
-                    accumsan in nisl.</p>
+                <h2>Billionaire playground</h2>
+                <p>This chart offers a vivid illustration of the industries where billionaires have amassed their fortunes. Three sectors stand out: <span class="industry">Technology </span> , <span class="industry"> Finance & Investments </span> and
+                    <span class="industry">Fashion & Retail</span>. The dominance of the technology industry reflects our era's digital transformation. Simultaneously, the prominence of fashion represents the hold of luxury brands on the world. </p>
+                <p>
+                    Note: This chart is interactive. Move the two sliders to reposition the bubbles.
+                </p>
             </div>
             <div id=bubble></div>
 
         </div>
-        <div>
+        <div class="container-normal">
             <div class="description description-right">
-                <h2>First and Second Columns Combined</h2>
-                <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
-                    accumsan in nisl.</p>
+                <h2>Where the money came from</h2>
+                <p>This following treemap offers a more granular view of specific companies founded by the billionaires. This offers insight on the diverse avenues which influence global wealth. </p>
+                <p>Play around by selecting a layout and changing the aspect ratio.</p>
+                <p>Click on a block to have a closer look on the respective industry. Click all to view all.</p>
             </div>
-            <div id=bubble></div>
+
+            <div id=treemap></div>
 
         </div>
 
     </div>
     <!-- end pure grid group -->
 
-    <div class="pure-g">
-        <div class="pure-u-1-1 small-font">
-            <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
-              Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
-        </div>
-      </div>
-  
-  
-    </div> <!-- end page -->
-  
-  </body>
-  
-  </html>
+
+</body>
+
+</html>
 
 </html>

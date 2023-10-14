@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
-    "description": "A treemap layout for hierarchical data.",
-    "width": 960,
+    "description": "A treemap based on CSV data.",
+    "width": 800,
     "height": 500,
     "padding": 2.5,
     "autosize": "none",
@@ -13,26 +13,68 @@
                 "input": "select",
                 "options": [
                     "squarify",
-                    "binary",
-                    "slicedice"
+                    "binary"
                 ]
             }
         },
         {
             "name": "aspectRatio",
             "value": 1.6,
-            "bind": { "input": "range", "min": 1, "max": 5, "step": 0.1 }
+            "bind": {
+                "input": "range",
+                "min": 1,
+                "max": 5,
+                "step": 0.1,
+                "name": "Aspect Ratio"
+            }
+        },
+
+        {
+            "name": "categoryFilter",
+            "value": "All",
+            "on": [{
+                "events": "rect:click",
+                "update": "datum.parent ? datum.parent : 'All'"
+            }],
+            "bind": {
+                "input": "select",
+                "options": [
+                    "All",
+                    "Automotive",
+                    "Construction & Engineering",
+                    "Diversified",
+                    "Energy",
+                    "Fashion & Retail",
+                    "Finance & Investments",
+                    "Food & Beverage",
+                    "Gambling & Casinos",
+                    "Healthcare",
+                    "Logistics",
+                    "Media & Entertainment",
+                    "Metals & Mining",
+                    "Real Estate",
+                    "Service",
+                    "Sports",
+                    "Technology",
+                    "Telecom"
+                ],
+                "name": "Sectors"
+            }
         }
     ],
 
     "data": [{
             "name": "tree",
-            "url": "treemap.csv",
+            "url": "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/treemap.csv",
             "format": { "type": "csv" },
             "transform": [{
                     "type": "stratify",
-                    "key": "id",
+                    "key": "name",
                     "parentKey": "parent"
+                },
+                {
+                    "type": "filter",
+                    "expr": "categoryFilter === 'All' || datum.parent === categoryFilter || datum.name === categoryFilter"
                 },
                 {
                     "type": "treemap",
@@ -58,29 +100,15 @@
     ],
 
     "scales": [{
-            "name": "color",
-            "type": "ordinal",
-            "domain": { "data": "nodes", "field": "name" },
-            "range": [
-                "#3182bd", "#6baed6", "#9ecae1", "#c6dbef", "#e6550d",
-                "#fd8d3c", "#fdae6b", "#fdd0a2", "#31a354", "#74c476",
-                "#a1d99b", "#c7e9c0", "#756bb1", "#9e9ac8", "#bcbddc",
-                "#dadaeb", "#636363", "#969696", "#bdbdbd", "#d9d9d9"
-            ]
-        },
-        {
-            "name": "size",
-            "type": "ordinal",
-            "domain": [0, 1, 2, 3],
-            "range": [256, 28, 20, 14]
-        },
-        {
-            "name": "opacity",
-            "type": "ordinal",
-            "domain": [0, 1, 2, 3],
-            "range": [0.15, 0.5, 0.8, 1.0]
-        }
-    ],
+        "name": "color",
+        "type": "ordinal",
+        "domain": { "data": "nodes", "field": "name" },
+        "range": [
+            "#CAF0F8", "#ADE8F4", "#90E0EF", "#48CAE4", "#0096C7", "#00B4D8",
+            "#E8AC65", "#FF8800", "#FF9500", "#0096C7", "#EDEEC9", "#FFAA00",
+            "#FFB700", "#FFC300", "#FFD000", "#ADE8F4", "#0096C7", "#E9F5DB"
+        ]
+    }],
 
     "marks": [{
             "type": "rect",
@@ -95,7 +123,8 @@
                     "y": { "field": "y0" },
                     "x2": { "field": "x1" },
                     "y2": { "field": "y1" }
-                }
+                },
+                "cursor": { "value": "pointer" }
             }
         },
         {
@@ -110,10 +139,13 @@
                     "y": { "field": "y0" },
                     "x2": { "field": "x1" },
                     "y2": { "field": "y1" },
-                    "fill": { "value": "transparent" }
+                    "fill": { "value": "transparent" },
+                    "tooltip": {
+                        "signal": "{'Name': datum.name, 'Amount': '$ ' + format(datum.value, ',') + ' bn' }"
+                    }
                 },
                 "hover": {
-                    "fill": { "value": "red" }
+                    "fill": { "value": "grey" }
                 }
             }
         },
@@ -123,13 +155,14 @@
             "interactive": false,
             "encode": {
                 "enter": {
-                    "font": { "value": "Helvetica Neue, Arial" },
+                    "font": { "value": "Calibri" },
                     "align": { "value": "center" },
                     "baseline": { "value": "middle" },
                     "fill": { "value": "#000" },
                     "text": { "field": "name" },
-                    "fontSize": { "scale": "size", "field": "depth" },
-                    "fillOpacity": { "scale": "opacity", "field": "depth" }
+                    "fontSize": { "value": 15 },
+                    "fontWeight": { "value": "bold" },
+                    "fillOpacity": [{ "test": "datum.name !== 'root'", "value": 1 }, { "value": 0 }]
                 },
                 "update": {
                     "x": { "signal": "0.5 * (datum.x0 + datum.x1)" },

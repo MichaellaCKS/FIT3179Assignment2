@@ -2,33 +2,72 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 450,
     "height": 200,
-    "title": "Age vs final worth",
+    "title": "Age vs worth",
     "data": {
         "url": "https://raw.githubusercontent.com/MichaellaCKS/FIT3179Assignment2/main/js/billionaires.csv"
     },
-    "mark": "line",
-    "encoding": {
-        "x": {
-            "field": "age",
-            "type": "quantitative",
-            "title": "Age",
-            "scale": { "domain": [20, 100] }
-        },
-        "y": {
-            "field": "finalWorth",
-            "type": "quantitative",
-            "title": "Worth in billions (USD)"
-        },
-        "color": {
-            "field": "gender",
-            "type": "nominal",
-            "scale": {
-                "domain": ["M", "F"],
-                "range": ["#00a6ed", "#fc6e32"]
+    "layer": [{
+            "mark": "line",
+            "selection": {
+                "grid": {
+                    "type": "interval",
+                    "bind": "scales"
+                }
             },
-            "title": "Worth in billions (USD)",
-            "legend": { "orient": "top" }
+            "encoding": {
+                "x": {
+                    "field": "age",
+                    "type": "quantitative",
+                    "title": "Age",
+                    "scale": { "domain": [20, 100] }
+                },
+                "y": {
+                    "field": "finalWorth",
+                    "type": "quantitative",
+                    "title": "Worth in billions (USD)"
+                },
+                "color": {
+                    "field": "gender",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": ["M", "F"],
+                        "range": ["#00a6ed", "#fc6e32"]
+                    },
+                    "title": "Gender",
+                    "legend": { "orient": "top" }
+                },
+                "tooltip": [
+                    { "field": "age", "type": "quantitative", "title": "Age" },
+                    { "field": "finalWorth", "type": "quantitative", "title": "Worth in billions (USD)" },
+                    { "field": "gender", "type": "nominal", "title": "Gender" }
+                ]
+            }
+        },
+        {
+            "transform": [
+                { "filter": "datum.age == 75" },
+                { "aggregate": [{ "op": "mean", "field": "finalWorth", "as": "averageWorth" }], "groupby": ["age"] }
+            ],
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "bottom",
+                "dx": 0,
+                "dy": -170
+            },
+            "encoding": {
+                "x": {
+                    "field": "age",
+                    "type": "quantitative"
+                },
+                "y": {
+                    "field": "averageWorth",
+                    "type": "quantitative"
+                },
+                "text": {
+                    "value": "At 75, men have more than 4x more money."
+                }
+            }
         }
-
-    }
+    ]
 }

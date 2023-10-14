@@ -1,7 +1,7 @@
 #line {
     top: -8px;
     bottom: 100px;
-    height: 200px;
+    height: 150px;
     width: 200px;
     margin-bottom: 150px;
 }
@@ -9,21 +9,29 @@
 #choropeth {
     top: 27px;
     bottom: 100px;
-    height: 500px;
+    height: 400px;
     width: 500px;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 50px;
 }
 
 #symbol {
     top: -8px;
     bottom: 100px;
-    height: 500px;
+    height: 400px;
     width: 800px;
     margin-bottom: 50px;
 }
 
 #bubble {
+    top: 27px;
+    bottom: 100px;
+    height: 550px;
+    width: 500px;
+    margin-bottom: 150px;
+}
+
+#tree {
     top: 27px;
     bottom: 100px;
     height: 500px;
@@ -32,17 +40,18 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Onest', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #e6aaaa;
-    color: #fff;
+.header {
+    background-color: #B87333;
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .container {
@@ -53,16 +62,29 @@ header {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Optional: To space out the flex items */
+    align-items: start;
 }
 
 h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 24px;
-    color: #333;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: black;
+    letter-spacing: 1px;
 }
 
 p {
     font-size: 16px;
-    color: #666;
+    color: #696969;
 }
 
 img {
@@ -72,9 +94,158 @@ img {
 }
 
 .page {
+    position: relative;
     width: 850px;
-    background-color: white;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+}
+
+.page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('pexels-photo-157520.jpeg');
+    opacity: 0.6;
+    /* Adjust this value to your desired opacity */
+    z-index: -1;
+}
+
+.pure-u-2-3 {
+    flex: 0 0 66.66%;
+    /* This makes it take up 2/3 of the container's width */
+}
+
+.pure-u-1-3 {
+    flex: 0 0 33.33%;
+    /* This makes it take up 1/3 of the container's width */
+}
+
+.container-normal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.dropdown {
+    color: blue;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 100px;
+}
+
+
+/* Apply styles to select elements */
+
+select {
+    appearance: none;
+    /* Remove default styles (e.g., arrows) on some browsers */
+    background-color: #f2f2f2;
+    /* Background color */
+    border: 1px solid #ccc;
+    /* Add a border */
+    padding: 5px 10px;
+    /* Add some padding for spacing */
+    font-family: inherit;
+    font-size: 16px;
+    /* Increase font size */
+    color: #333;
+    /* Text color */
+    border-radius: 5px;
+    /* Rounded corners */
+    width: 100%;
+    /* Make the dropdown width 100% of its container */
+}
+
+
+/* Apply styles when the dropdown is focused (clicked) */
+
+select:focus {
+    outline: none;
+    /* Remove the default focus outline */
+    border-color: #007BFF;
+    /* Change the border color on focus */
+}
+
+
+/* Apply styles on hover */
+
+select:hover {
+    background-color: #e0e0e0;
+    /* Lighten the background color on hover */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+
+/* Apply styles on selection (option) */
+
+select option {
+    font-family: inherit;
+    font-size: 16px;
+    /* Match the font size with the dropdown */
+    color: #333;
+    /* Text color */
+}
+
+
+/* Style the arrow (if 'appearance: none' is used) */
+
+select::after {
+    content: '\25BC';
+    /* Unicode character for a down arrow */
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 5px;
+    pointer-events: none;
+    /* Make sure the arrow doesn't interfere with clicking */
+    color: #555;
+    /* Arrow color */
+}
+
+.vega-bind {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 40%;
+    font-family: 'Onest', sans-serif;
+}
+
+.countries {
+    color: #b30000;
+    font-weight: bold;
+}
+
+.shaded {
+    color: #fdcc8a;
+}
+
+.men {
+    color: #00a6ed;
+    font-weight: bold;
+}
+
+.women {
+    color: #fc6e32;
+    font-weight: bold;
+}
+
+.industry {
+    color: orange;
+    font-weight: bold;
 }
