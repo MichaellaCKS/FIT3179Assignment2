@@ -155,7 +155,7 @@
             "interactive": false,
             "encode": {
                 "enter": {
-                    "font": { "value": "Calibri" },
+                    "font": { "value": "Segoe UI" },
                     "align": { "value": "center" },
                     "baseline": { "value": "middle" },
                     "fill": { "value": "#000" },
