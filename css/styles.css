@@ -121,6 +121,15 @@ img {
 
 .pure-u-1-3 {
     flex: 0 0 33.33%;
+    display: flex;
+    justify-content: space-between;
+    /* Optional: To space out the flex items */
+    align-items: start;
+    /* This makes it take up 1/3 of the container's width */
+}
+
+.pure-u-2-2 {
+    flex: 0 0 50%;
     /* This makes it take up 1/3 of the container's width */
 }
 
@@ -248,4 +257,25 @@ select::after {
 .industry {
     color: orange;
     font-weight: bold;
+}
+
+.container-images {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b873333a;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* Optional: To space out the flex items */
+    align-items: start;
+}
+
+.bios {
+    padding: 10px;
+    font-family: 'Onest', sans-serif;
+    font-size: 12px;
+    color: black;
 }
